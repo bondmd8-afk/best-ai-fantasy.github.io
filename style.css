@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
 body {
@@ -10,38 +10,32 @@ body {
   color: #fff;
 }
 
-/* HEADER */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
+  background: rgba(0,0,0,0.6);
   padding: 15px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0,0,0,0.85);
-  z-index: 1000;
+  z-index: 10;
 }
 
 .logo {
-  font-size: 26px;
+  font-size: 28px;
   font-weight: bold;
-  color: #ff3cac;
-  text-shadow: 0 0 15px #ff3cac;
 }
 
-nav a {
-  color: #fff;
+.header nav a {
   margin-left: 20px;
+  color: #fff;
   text-decoration: none;
-  font-size: 14px;
 }
 
-/* HERO */
 .hero {
   height: 100vh;
-  background-size: cover;
-  background-position: center;
+  background: url("images/banner.png") center/cover no-repeat fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,71 +45,67 @@ nav a {
 .hero-content {
   background: rgba(0,0,0,0.6);
   padding: 40px;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
-.hero h1 {
+.hero h2 {
   font-size: 42px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
-.hero p {
-  font-size: 18px;
-  margin-bottom: 20px;
+.search-box {
+  padding: 20px;
+  text-align: center;
 }
 
-#searchInput {
+.search-box input {
+  width: 300px;
   padding: 12px;
-  width: 260px;
-  border-radius: 8px;
+  border-radius: 6px;
   border: none;
-  outline: none;
 }
 
-/* OFFERS */
 .offers {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
-  padding: 80px 40px;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+  padding: 40px;
 }
 
-.card {
-  background: #111;
-  border-radius: 15px;
+.offer {
+  background: #14141c;
+  border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.3s;
+  text-align: center;
+  transition: 0.3s;
 }
 
-.card:hover {
-  transform: translateY(-8px);
+.offer:hover {
+  transform: translateY(-5px);
 }
 
-.card img {
+.offer img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
 
-.card h3 {
-  padding: 15px;
-  font-size: 18px;
+.offer h3 {
+  padding: 10px;
 }
 
-.card a {
+.offer a {
   display: block;
-  background: linear-gradient(45deg,#ff3cac,#784ba0);
+  margin: 15px;
+  padding: 10px;
+  background: #ff0055;
   color: #fff;
-  text-align: center;
-  padding: 12px;
   text-decoration: none;
+  border-radius: 5px;
 }
 
-/* FOOTER */
-footer {
+.footer {
   text-align: center;
   padding: 20px;
   background: #000;
-  font-size: 14px;
 }
-
