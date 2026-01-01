@@ -1,76 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>🔥 Top AI Fantasy & Girlfriend Services</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    body{margin:0;font-family:Arial;background:#0f0f0f;color:#fff}
-    h1{text-align:center;padding:20px}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;padding:20px}
-    .card{background:#1c1c1c;border-radius:10px;overflow:hidden}
-    .card img{width:100%;height:170px;object-fit:cover}
-    .card h3{margin:10px;font-size:18px}
-    .btn{display:block;margin:10px;background:#ff0055;color:#fff;
-      text-align:center;padding:10px;border-radius:6px;text-decoration:none;font-weight:bold}
-    .rank{position:absolute;background:#ff0055;padding:5px 10px}
-    .wrap{position:relative}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Fantasy World – Top AI Girlfriend & Fantasy Services</title>
+
+<meta name="description" content="AI Fantasy World brings the best AI Girlfriend, Fantasy Chat, and Virtual Companion services. Explore 41 premium AI offers in one place.">
+<meta name="keywords" content="AI Girlfriend, AI Fantasy, Virtual Girlfriend, AI Companion, Fantasy AI Chat">
+
+<!-- GOOGLE SEO -->
+<meta name="robots" content="index, follow">
+
+<!-- FONTS -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
+body{
+  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
+  color:#fff;
+  min-height:100vh;
+}
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(0,0,0,.7);
+  backdrop-filter:blur(10px);
+  padding:15px 30px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+header h1{
+  font-size:28px;
+  font-weight:700;
+  background:linear-gradient(90deg,#ff00cc,#3333ff);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+nav a{
+  color:#fff;
+  margin-left:18px;
+  text-decoration:none;
+  font-size:14px;
+  opacity:.85;
+}
+nav a:hover{opacity:1}
+
+.hero{
+  height:70vh;
+  background:url("banner.jpg") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+}
+.hero h2{
+  font-size:48px;
+  font-weight:700;
+  text-shadow:0 10px 40px rgba(0,0,0,.7);
+}
+
+.search-box{
+  margin:30px auto;
+  max-width:500px;
+  padding:0 20px;
+}
+.search-box input{
+  width:100%;
+  padding:14px;
+  border-radius:30px;
+  border:none;
+  outline:none;
+  font-size:16px;
+}
+
+.container{
+  max-width:1300px;
+  margin:auto;
+  padding:20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+.card{
+  background:rgba(255,255,255,.08);
+  border-radius:16px;
+  overflow:hidden;
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 15px 40px rgba(0,0,0,.5);
+}
+.card img{
+  width:100%;
+  height:180px;
+  object-fit:cover;
+}
+.card h3{
+  padding:15px;
+  font-size:18px;
+}
+.card a{
+  display:block;
+  margin:0 15px 15px;
+  text-align:center;
+  background:linear-gradient(90deg,#ff00cc,#3333ff);
+  padding:10px;
+  border-radius:25px;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+}
+.card a:hover{opacity:.9}
+
+@media(max-width:600px){
+  .hero h2{font-size:32px}
+}
+</style>
+
+<!-- 🔥 Adsterra Social Bar -->
+<script src="https://fibredelivery.com/6f/c9/40/6fc940617abd216437165f1879bb0012.js"></script>
 </head>
+
 <body>
 
-<h1>🔥 Top AI Fantasy & Girlfriend Services</h1>
-<div class="grid" id="offers"></div>
+<header>
+  <h1>AI Fantasy World</h1>
+  <nav>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Disclaimer</a>
+    <a href="#">Copyright</a>
+  </nav>
+</header>
 
+<section class="hero">
+  <h2>🔥 Top AI Fantasy & Girlfriend Services</h2>
+</section>
+
+<div class="search-box">
+  <input type="text" id="searchInput" placeholder="Search AI Offers...">
+</div>
+
+<div class="container" id="offerList">
+
+<!-- OFFER CARD TEMPLATE -->
 <script>
+const smartLink = "https://fibredelivery.com/ncm9wbnq8?key=e199a7a403eb1ccd494e76f512ecc11a";
+
 const offers = [
-  {rank:1,title:"AI Allure",img:"images/aiallure.jpg",link:"https://t.crjmpx.com/40746/7961"},
-  {rank:2,title:"AI Allure",img:"images/aiallure2.jpg",link:"https://t.crjmpx.com/40746/7962"},
-  {rank:3,title:"Aimour.ai",img:"images/Aimour.ai.jpg",link:"https://t.crjmpx.com/40746/8023"},
-  {rank:4,title:"Aimour.ai",img:"images/Aimour.ai2.jpg",link:"https://t.crjmpx.com/40746/7986"},
-  {rank:5,title:"BrainPill",img:"images/BrainPill.jpg",link:"https://t.crjmpx.com/40746/7306"},
-  {rank:6,title:"Candy.ai",img:"images/Candy.ai.jpg",link:"https://t.crjmpx.com/40746/6646"},
-  {rank:7,title:"Candy.ai",img:"images/Candy.ai2.jpg",link:"https://t.crjmpx.com/40746/7793"},
-  {rank:8,title:"DreamBF.ai",img:"images/DreamBF.ai.jpg",link:"https://t.crjmpx.com/40746/6559"},
-  {rank:9,title:"Dreamgf.ai",img:"images/Dreamgf.ai.jpg",link:"https://t.crjmpx.com/40746/6523"},
-  {rank:10,title:"eHentai.ai",img:"images/eHentai.ai.jpg",link:"https://t.crjmpx.com/40746/6558"},
-  {rank:11,title:"Fanfinity",img:"images/Fanfinity.jpg",link:"https://t.crjmpx.com/40746/7722"},
-  {rank:12,title:"Fanfinity",img:"images/Fanfinity2.jpg",link:"https://t.crjmpx.com/40746/7721"},
-  {rank:13,title:"Fantasy.Ai",img:"images/Fantasy.Ai.jpg",link:"https://t.crjmpx.com/40746/7511"},
-  {rank:14,title:"Get-Harder",img:"images/Get-Harder.jpg",link:"https://t.crjmpx.com/40746/7795"},
-  {rank:15,title:"Girlfriend GPT",img:"images/Girlfriend GPT.png",link:"https://t.crjmpx.com/40746/7477"},
-  {rank:16,title:"golove.ai",img:"images/golove.ai.jpg",link:"https://t.crjmpx.com/40746/7912"},
-  {rank:17,title:"golove.ai",img:"images/golove.ai.jpg",link:"https://t.crjmpx.com/40746/7911"},
-  {rank:18,title:"Joi",img:"images/Joi.jpg",link:"https://t.crjmpx.com/40746/7761"},
-  {rank:19,title:"Joi",img:"images/Joi2.jpg",link:"https://t.crjmpx.com/40746/7875"},
-  {rank:20,title:"JustSext",img:"images/JustSext.jpg",link:"https://t.crjmpx.com/40746/7946"},
-  {rank:21,title:"Kupid.Ai",img:"images/Kupid.png",link:"https://t.crjmpx.com/40746/6924"},
-  {rank:22,title:"Lovescape",img:"images/Lovescape.jpg",link:"https://t.crjmpx.com/40746/7887"},
-  {rank:23,title:"Luvr.Ai",img:"images/Luvr.Ai.jpg",link:"https://t.crjmpx.com/40746/7944"},
-  {rank:24,title:"MyLovely Ai",img:"images/MyLovely Ai.jpg",link:"https://t.crjmpx.com/40746/10318"},
-  {rank:25,title:"ourdream.ai",img:"images/ourdream.ai.png",link:"https://t.crjmpx.com/40746/7710"},
-  {rank:26,title:"Pleasur.Ai",img:"images/Pleasur.Ai.jpg",link:"https://t.crjmpx.com/40746/7709"},
-  {rank:27,title:"Pocketgirl Ai",img:"images/Pocketgirl Ai.jpg",link:"https://t.crjmpx.com/40746/7401"},
-  {rank:28,title:"Secret Desires AI",img:"images/Secret Desires AI.jpg",link:"https://t.crjmpx.com/40746/7757"},
-  {rank:29,title:"Spicier",img:"images/Spicier.jpg",link:"https://t.crjmpx.com/40746/7927"},
-  {rank:30,title:"Swipey",img:"images/Swipey.jpg",link:"https://t.crjmpx.com/40746/7976"},
-  {rank:31,title:"TestRX",img:"images/TestRX.jpg",link:"https://t.crjmpx.com/40746/7977"},
-  {rank:32,title:"Transgender AI",img:"images/Transgender.jpg",link:"https://t.crjmpx.com/40746/10339"}
+  ["AI Allure","aiallure.jpg"],
+  ["AI Allure","aiallure2.jpg"],
+  ["Aimour.ai","Aimour.ai.jpg"],
+  ["Aimour.ai","Aimour.ai2.jpg"],
+  ["BrainPill","BrainPill.jpg"],
+  ["Candy.ai","Candy.ai.jpg"],
+  ["Candy.ai","Candy.ai2.jpg"],
+  ["DreamBF.ai","DreamBF.ai.jpg"],
+  ["Dreamgf.ai","Dreamgf.ai.jpg"],
+  ["eHentai.ai","eHentai.ai.jpg"],
+  ["Fanfinity","Fanfinity.jpg"],
+  ["Fanfinity","Fanfinity2.jpg"],
+  ["Fantasy.Ai","Fantasy.Ai.jpg"],
+  ["Get-Harder","Get-Harder.jpg"],
+  ["Girlfriend GPT","Girlfriend GPT.png"],
+  ["golove.ai","golove.ai.jpg"],
+  ["golove.ai","golove.ai.jpg"],
+  ["Joi","Joi.jpg"],
+  ["Joi","Joi2.jpg"],
+  ["Joi","Joi3.jpg"],
+  ["Joi","Joi4.jpg"],
+  ["Joi","Joi5.jpg"],
+  ["JustSext","JustSext.jpg"],
+  ["Kupid.Ai","Kupid.png"],
+  ["Lovescape","Lovescape.jpg"],
+  ["Luvr.Ai","Luvr.Ai.jpg"],
+  ["MyLovely Ai","MyLovely Ai.jpg"],
+  ["ourdream.ai","ourdream.ai.png"],
+  ["ourdream.ai","ourdream.ai2.png"],
+  ["Pleasur.Ai","Pleasur.Ai.jpg"],
+  ["Pleasur.Ai","Pleasur.Ai2.jpg"],
+  ["Pocketgirl Ai","Pocketgirl Ai.jpg"],
+  ["Secret Desires AI","Secret Desires AI.jpg"],
+  ["Secret Desires AI","Secret Desires AI2.jpg"],
+  ["Secrets.ai","secret.jpg"],
+  ["Spicier","Spicier.jpg"],
+  ["Swipey","Swipey.jpg"],
+  ["Swipey","Swipey2.jpg"],
+  ["Testosterone Support Innerbody Labs","Testosterone Support Innerbody Labs.jpg"],
+  ["TestRX","TestRX.jpg"],
+  ["Transgender Ai","Transgender.jpg"]
 ];
 
-const box = document.getElementById("offers");
+const list = document.getElementById("offerList");
+
 offers.forEach(o=>{
-  box.innerHTML += `
+  list.innerHTML += `
   <div class="card">
-    <div class="wrap">
-      <span class="rank">#${o.rank}</span>
-      <img src="${o.img}">
-    </div>
-    <h3>${o.title}</h3>
-    <a class="btn" href="${o.link}" target="_blank" rel="nofollow">Visit Now</a>
+    <img src="images/${o[1]}" alt="${o[0]}">
+    <h3>${o[0]}</h3>
+    <a href="${smartLink}" target="_blank">Visit Now</a>
   </div>`;
 });
+
+document.getElementById("searchInput").addEventListener("keyup",function(){
+  let v=this.value.toLowerCase();
+  document.querySelectorAll(".card").forEach(c=>{
+    c.style.display=c.innerText.toLowerCase().includes(v)?"block":"none";
+  });
+});
 </script>
+
+</div>
 
 </body>
 </html>
