@@ -2,105 +2,51 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Best AI Fantasy – Top AI Companion Services</title>
-  <meta name="description" content="Discover the best AI companion and fantasy AI services. Compare top AI platforms with images and direct access." />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+  <title>TspMoviesZone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #0b0b0f;
-      color: #fff;
-    }
-    h1 {
-      text-align: center;
-      padding: 20px 10px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .card {
-      background: #14141c;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0,0,0,.5);
-      transition: transform .3s ease;
-    }
-    .card:hover {
-      transform: translateY(-6px);
-    }
-    .card img {
-      width: 100%;
-      height: 160px;
-      object-fit: cover;
-    }
-    .card .content {
-      padding: 12px;
-    }
-    .card h3 {
-      margin: 0 0 8px;
-      font-size: 16px;
-    }
-    .card a {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 8px 12px;
-      background: #e50914;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      font-size: 14px;
-    }
+    body{background:#0f0f0f;color:#fff;font-family:Arial;margin:0}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;padding:16px}
+    .card{background:#1b1b1b;border-radius:10px;overflow:hidden;transition:.3s}
+    .card:hover{transform:scale(1.03)}
+    .card img{width:100%;height:160px;object-fit:cover}
+    .card h3{margin:10px;font-size:16px}
+    .card a{display:block;margin:10px;background:#e50914;color:#fff;
+      text-align:center;padding:8px;border-radius:6px;text-decoration:none}
   </style>
 </head>
-
 <body>
 
-  <h1>Best AI Fantasy</h1>
-  <div class="grid" id="offers"></div>
+<div class="grid" id="offers"></div>
 
-  <!-- Firebase -->
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+  import { getFirestore, collection, getDocs, query, orderBy } 
+  from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-    // 🔒 YOUR FINAL FIREBASE CONFIG (LOCKED)
-    const firebaseConfig = {
-      apiKey: "AIzaSyCRLhny8vgo3bjsn-0d2XLU7vakZMMuTn0",
-      authDomain: "tspmovieszone.firebaseapp.com",
-      projectId: "tspmovieszone",
-      storageBucket: "tspmovieszone.firebasestorage.app",
-      messagingSenderId: "156064301789",
-      appId: "1:156064301789:web:1200f842c1630c39ec9134",
-      measurementId: "G-JXCTFXJ582"
-    };
+  const firebaseConfig = {
+    apiKey: "AIzaSyCRLhny8vgo3bjsn-0d2XLU7vakZMMuTn0",
+    authDomain: "tspmovieszone.firebaseapp.com",
+    projectId: "tspmovieszone"
+  };
 
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
+  const app = initializeApp(firebaseConfig);
+  const db = getFirestore(app);
 
-    const grid = document.getElementById("offers");
+  const q = query(collection(db, "offers"), orderBy("rank"));
+  const snap = await getDocs(q);
 
-    const snapshot = await getDocs(collection(db, "offers"));
-    snapshot.forEach(doc => {
-      const data = doc.data();
-
-      grid.innerHTML += `
-        <div class="card">
-          <img src="${data.image || 'https://via.placeholder.com/400x250'}">
-          <div class="content">
-            <h3>${data.title || 'AI Offer'}</h3>
-            <a href="${data.link || '#'}" target="_blank">View Now</a>
-          </div>
-        </div>
-      `;
-    });
-  </script>
-
+  const wrap = document.getElementById("offers");
+  snap.forEach(doc => {
+    const d = doc.data();
+    wrap.innerHTML += `
+      <div class="card">
+        <img src="${d.image}">
+        <h3>${d.title}</h3>
+        <a href="${d.link}" target="_blank">Watch Now</a>
+      </div>
+    `;
+  });
+</script>
 </body>
 </html>
