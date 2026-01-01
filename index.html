@@ -1,223 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <title>AI Fantasy World – Top AI Girlfriend & Fantasy Services</title>
 
-<title>AI Fantasy World – Top AI Girlfriend & Fantasy Services</title>
+  <!-- SEO -->
+  <meta name="description" content="Top AI Fantasy, AI Girlfriend & Adult AI Services. Discover the best AI experiences in one place.">
+  <meta name="keywords" content="AI Girlfriend, AI Fantasy, AI Companion, Adult AI, Virtual Girlfriend">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="AI Fantasy World brings the best AI Girlfriend, Fantasy Chat, and Virtual Companion services. Explore 41 premium AI offers in one place.">
-<meta name="keywords" content="AI Girlfriend, AI Fantasy, Virtual Girlfriend, AI Companion, Fantasy AI Chat">
+  <link rel="stylesheet" href="style.css">
 
-<!-- GOOGLE SEO -->
-<meta name="robots" content="index, follow">
-
-<!-- FONTS -->
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Poppins,sans-serif}
-body{
-  background:linear-gradient(135deg,#0f0c29,#302b63,#24243e);
-  color:#fff;
-  min-height:100vh;
-}
-header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:rgba(0,0,0,.7);
-  backdrop-filter:blur(10px);
-  padding:15px 30px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-header h1{
-  font-size:28px;
-  font-weight:700;
-  background:linear-gradient(90deg,#ff00cc,#3333ff);
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-}
-nav a{
-  color:#fff;
-  margin-left:18px;
-  text-decoration:none;
-  font-size:14px;
-  opacity:.85;
-}
-nav a:hover{opacity:1}
-
-.hero{
-  height:70vh;
-  background:url("banner.jpg") center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-}
-.hero h2{
-  font-size:48px;
-  font-weight:700;
-  text-shadow:0 10px 40px rgba(0,0,0,.7);
-}
-
-.search-box{
-  margin:30px auto;
-  max-width:500px;
-  padding:0 20px;
-}
-.search-box input{
-  width:100%;
-  padding:14px;
-  border-radius:30px;
-  border:none;
-  outline:none;
-  font-size:16px;
-}
-
-.container{
-  max-width:1300px;
-  margin:auto;
-  padding:20px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:20px;
-}
-
-.card{
-  background:rgba(255,255,255,.08);
-  border-radius:16px;
-  overflow:hidden;
-  transition:.3s;
-}
-.card:hover{
-  transform:translateY(-6px);
-  box-shadow:0 15px 40px rgba(0,0,0,.5);
-}
-.card img{
-  width:100%;
-  height:180px;
-  object-fit:cover;
-}
-.card h3{
-  padding:15px;
-  font-size:18px;
-}
-.card a{
-  display:block;
-  margin:0 15px 15px;
-  text-align:center;
-  background:linear-gradient(90deg,#ff00cc,#3333ff);
-  padding:10px;
-  border-radius:25px;
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-}
-.card a:hover{opacity:.9}
-
-@media(max-width:600px){
-  .hero h2{font-size:32px}
-}
-</style>
-
-<!-- 🔥 Adsterra Social Bar -->
-<script src="https://fibredelivery.com/6f/c9/40/6fc940617abd216437165f1879bb0012.js"></script>
+  <!-- Adsterra Social Bar -->
+  <script src="https://fibredelivery.com/6f/c9/40/6fc940617abd216437165f1879bb0012.js"></script>
 </head>
-
 <body>
 
-<header>
-  <h1>AI Fantasy World</h1>
-  <nav>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Disclaimer</a>
-    <a href="#">Copyright</a>
-  </nav>
-</header>
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">AI Fantasy World</div>
 
-<section class="hero">
-  <h2>🔥 Top AI Fantasy & Girlfriend Services</h2>
-</section>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Disclaimer</a>
+    </nav>
+  </header>
 
-<div class="search-box">
-  <input type="text" id="searchInput" placeholder="Search AI Offers...">
-</div>
+  <!-- HERO -->
+  <section class="hero" style="background-image:url('images/banner.png')">
+    <div class="hero-content">
+      <h1>🔥 Top AI Fantasy & Girlfriend Services</h1>
+      <p>41+ Premium AI Experiences in One Place</p>
+      <input type="text" id="searchInput" placeholder="Search AI Service..." />
+    </div>
+  </section>
 
-<div class="container" id="offerList">
+  <!-- OFFERS -->
+  <section class="offers" id="offers"></section>
 
-<!-- OFFER CARD TEMPLATE -->
-<script>
-const smartLink = "https://fibredelivery.com/ncm9wbnq8?key=e199a7a403eb1ccd494e76f512ecc11a";
+  <!-- FOOTER -->
+  <footer>
+    © 2026 AI Fantasy World. All Rights Reserved.
+  </footer>
 
-const offers = [
-  ["AI Allure","aiallure.jpg"],
-  ["AI Allure","aiallure2.jpg"],
-  ["Aimour.ai","Aimour.ai.jpg"],
-  ["Aimour.ai","Aimour.ai2.jpg"],
-  ["BrainPill","BrainPill.jpg"],
-  ["Candy.ai","Candy.ai.jpg"],
-  ["Candy.ai","Candy.ai2.jpg"],
-  ["DreamBF.ai","DreamBF.ai.jpg"],
-  ["Dreamgf.ai","Dreamgf.ai.jpg"],
-  ["eHentai.ai","eHentai.ai.jpg"],
-  ["Fanfinity","Fanfinity.jpg"],
-  ["Fanfinity","Fanfinity2.jpg"],
-  ["Fantasy.Ai","Fantasy.Ai.jpg"],
-  ["Get-Harder","Get-Harder.jpg"],
-  ["Girlfriend GPT","Girlfriend GPT.png"],
-  ["golove.ai","golove.ai.jpg"],
-  ["golove.ai","golove.ai.jpg"],
-  ["Joi","Joi.jpg"],
-  ["Joi","Joi2.jpg"],
-  ["Joi","Joi3.jpg"],
-  ["Joi","Joi4.jpg"],
-  ["Joi","Joi5.jpg"],
-  ["JustSext","JustSext.jpg"],
-  ["Kupid.Ai","Kupid.png"],
-  ["Lovescape","Lovescape.jpg"],
-  ["Luvr.Ai","Luvr.Ai.jpg"],
-  ["MyLovely Ai","MyLovely Ai.jpg"],
-  ["ourdream.ai","ourdream.ai.png"],
-  ["ourdream.ai","ourdream.ai2.png"],
-  ["Pleasur.Ai","Pleasur.Ai.jpg"],
-  ["Pleasur.Ai","Pleasur.Ai2.jpg"],
-  ["Pocketgirl Ai","Pocketgirl Ai.jpg"],
-  ["Secret Desires AI","Secret Desires AI.jpg"],
-  ["Secret Desires AI","Secret Desires AI2.jpg"],
-  ["Secrets.ai","secret.jpg"],
-  ["Spicier","Spicier.jpg"],
-  ["Swipey","Swipey.jpg"],
-  ["Swipey","Swipey2.jpg"],
-  ["Testosterone Support Innerbody Labs","Testosterone Support Innerbody Labs.jpg"],
-  ["TestRX","TestRX.jpg"],
-  ["Transgender Ai","Transgender.jpg"]
-];
+  <!-- Smartlink (Redirect Ads) -->
+  <script>
+    document.addEventListener("click", function () {
+      window.open("https://fibredelivery.com/ncm9wbnq8?key=e199a7a403eb1ccd494e76f512ecc11a", "_blank");
+    }, { once: true });
+  </script>
 
-const list = document.getElementById("offerList");
-
-offers.forEach(o=>{
-  list.innerHTML += `
-  <div class="card">
-    <img src="images/${o[1]}" alt="${o[0]}">
-    <h3>${o[0]}</h3>
-    <a href="${smartLink}" target="_blank">Visit Now</a>
-  </div>`;
-});
-
-document.getElementById("searchInput").addEventListener("keyup",function(){
-  let v=this.value.toLowerCase();
-  document.querySelectorAll(".card").forEach(c=>{
-    c.style.display=c.innerText.toLowerCase().includes(v)?"block":"none";
-  });
-});
-</script>
-
-</div>
-
+  <script src="script.js"></script>
 </body>
 </html>
