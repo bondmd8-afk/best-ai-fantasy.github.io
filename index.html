@@ -3,30 +3,104 @@
 <head>
   <meta charset="UTF-8" />
   <title>Best AI Fantasy – Top AI Companion Services</title>
-  <meta name="description" content="Top AI Companion & Fantasy AI Services. Discover the best AI experiences." />
-</head>
-<body>
-  <h1>Best AI Fantasy</h1>
-  <div id="offers"></div>
+  <meta name="description" content="Discover the best AI companion and fantasy AI services. Compare top AI platforms with images and direct access." />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Firebase SDK -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b0f;
+      color: #fff;
+    }
+    h1 {
+      text-align: center;
+      padding: 20px 10px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: #14141c;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0,0,0,.5);
+      transition: transform .3s ease;
+    }
+    .card:hover {
+      transform: translateY(-6px);
+    }
+    .card img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+    }
+    .card .content {
+      padding: 12px;
+    }
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+    }
+    .card a {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 8px 12px;
+      background: #e50914;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Best AI Fantasy</h1>
+  <div class="grid" id="offers"></div>
+
+  <!-- Firebase -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
     import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
+    // 🔒 YOUR FINAL FIREBASE CONFIG (LOCKED)
     const firebaseConfig = {
-      // 🔴 এখানে তোমার Firebase SDK config paste করবে
+      apiKey: "AIzaSyCRLhny8vgo3bjsn-0d2XLU7vakZMMuTn0",
+      authDomain: "tspmovieszone.firebaseapp.com",
+      projectId: "tspmovieszone",
+      storageBucket: "tspmovieszone.firebasestorage.app",
+      messagingSenderId: "156064301789",
+      appId: "1:156064301789:web:1200f842c1630c39ec9134",
+      measurementId: "G-JXCTFXJ582"
     };
 
     const app = initializeApp(firebaseConfig);
     const db = getFirestore(app);
 
-    const offersDiv = document.getElementById("offers");
+    const grid = document.getElementById("offers");
 
-    const querySnapshot = await getDocs(collection(db, "offers"));
-    querySnapshot.forEach((doc) => {
-      offersDiv.innerHTML += `<p>${doc.data().title}</p>`;
+    const snapshot = await getDocs(collection(db, "offers"));
+    snapshot.forEach(doc => {
+      const data = doc.data();
+
+      grid.innerHTML += `
+        <div class="card">
+          <img src="${data.image || 'https://via.placeholder.com/400x250'}">
+          <div class="content">
+            <h3>${data.title || 'AI Offer'}</h3>
+            <a href="${data.link || '#'}" target="_blank">View Now</a>
+          </div>
+        </div>
+      `;
     });
   </script>
+
 </body>
 </html>
