@@ -2,62 +2,75 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Best AI Fantasy & Girlfriend Tools | Top AI Services 2026</title>
-  <meta name="description" content="Discover the best AI fantasy, girlfriend & adult AI tools. Updated top CPA AI offers with images and direct access." />
-  <meta name="keywords" content="Best AI Tools, AI Girlfriend, AI Fantasy, Top AI Services, CPA AI Offers" />
+  <title>🔥 Top AI Fantasy & Girlfriend Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <style>
     body{margin:0;font-family:Arial;background:#0f0f0f;color:#fff}
     h1{text-align:center;padding:20px}
     .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;padding:20px}
-    .card{background:#1c1c1c;border-radius:10px;overflow:hidden;box-shadow:0 0 15px rgba(0,0,0,.5)}
-    .card img{width:100%;height:160px;object-fit:cover}
-    .card h3{margin:10px}
+    .card{background:#1c1c1c;border-radius:10px;overflow:hidden}
+    .card img{width:100%;height:170px;object-fit:cover}
+    .card h3{margin:10px;font-size:18px}
     .btn{display:block;margin:10px;background:#ff0055;color:#fff;
       text-align:center;padding:10px;border-radius:6px;text-decoration:none;font-weight:bold}
-    .rank{position:absolute;background:#ff0055;padding:5px 10px;border-radius:0 0 8px 0}
+    .rank{position:absolute;background:#ff0055;padding:5px 10px}
     .wrap{position:relative}
   </style>
 </head>
-
 <body>
-  <h1>🔥 Top AI Fantasy & Girlfriend Services</h1>
 
-  <div class="grid" id="offers"></div>
+<h1>🔥 Top AI Fantasy & Girlfriend Services</h1>
+<div class="grid" id="offers"></div>
 
-  <script type="module">
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-    import { getFirestore, collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+<script>
+const offers = [
+  {rank:1,title:"AI Allure",img:"images/aiallure.jpg",link:"https://t.crjmpx.com/40746/7961"},
+  {rank:2,title:"AI Allure",img:"images/aiallure2.jpg",link:"https://t.crjmpx.com/40746/7962"},
+  {rank:3,title:"Aimour.ai",img:"images/Aimour.ai.jpg",link:"https://t.crjmpx.com/40746/8023"},
+  {rank:4,title:"Aimour.ai",img:"images/Aimour.ai2.jpg",link:"https://t.crjmpx.com/40746/7986"},
+  {rank:5,title:"BrainPill",img:"images/BrainPill.jpg",link:"https://t.crjmpx.com/40746/7306"},
+  {rank:6,title:"Candy.ai",img:"images/Candy.ai.jpg",link:"https://t.crjmpx.com/40746/6646"},
+  {rank:7,title:"Candy.ai",img:"images/Candy.ai2.jpg",link:"https://t.crjmpx.com/40746/7793"},
+  {rank:8,title:"DreamBF.ai",img:"images/DreamBF.ai.jpg",link:"https://t.crjmpx.com/40746/6559"},
+  {rank:9,title:"Dreamgf.ai",img:"images/Dreamgf.ai.jpg",link:"https://t.crjmpx.com/40746/6523"},
+  {rank:10,title:"eHentai.ai",img:"images/eHentai.ai.jpg",link:"https://t.crjmpx.com/40746/6558"},
+  {rank:11,title:"Fanfinity",img:"images/Fanfinity.jpg",link:"https://t.crjmpx.com/40746/7722"},
+  {rank:12,title:"Fanfinity",img:"images/Fanfinity2.jpg",link:"https://t.crjmpx.com/40746/7721"},
+  {rank:13,title:"Fantasy.Ai",img:"images/Fantasy.Ai.jpg",link:"https://t.crjmpx.com/40746/7511"},
+  {rank:14,title:"Get-Harder",img:"images/Get-Harder.jpg",link:"https://t.crjmpx.com/40746/7795"},
+  {rank:15,title:"Girlfriend GPT",img:"images/Girlfriend GPT.png",link:"https://t.crjmpx.com/40746/7477"},
+  {rank:16,title:"golove.ai",img:"images/golove.ai.jpg",link:"https://t.crjmpx.com/40746/7912"},
+  {rank:17,title:"golove.ai",img:"images/golove.ai.jpg",link:"https://t.crjmpx.com/40746/7911"},
+  {rank:18,title:"Joi",img:"images/Joi.jpg",link:"https://t.crjmpx.com/40746/7761"},
+  {rank:19,title:"Joi",img:"images/Joi2.jpg",link:"https://t.crjmpx.com/40746/7875"},
+  {rank:20,title:"JustSext",img:"images/JustSext.jpg",link:"https://t.crjmpx.com/40746/7946"},
+  {rank:21,title:"Kupid.Ai",img:"images/Kupid.png",link:"https://t.crjmpx.com/40746/6924"},
+  {rank:22,title:"Lovescape",img:"images/Lovescape.jpg",link:"https://t.crjmpx.com/40746/7887"},
+  {rank:23,title:"Luvr.Ai",img:"images/Luvr.Ai.jpg",link:"https://t.crjmpx.com/40746/7944"},
+  {rank:24,title:"MyLovely Ai",img:"images/MyLovely Ai.jpg",link:"https://t.crjmpx.com/40746/10318"},
+  {rank:25,title:"ourdream.ai",img:"images/ourdream.ai.png",link:"https://t.crjmpx.com/40746/7710"},
+  {rank:26,title:"Pleasur.Ai",img:"images/Pleasur.Ai.jpg",link:"https://t.crjmpx.com/40746/7709"},
+  {rank:27,title:"Pocketgirl Ai",img:"images/Pocketgirl Ai.jpg",link:"https://t.crjmpx.com/40746/7401"},
+  {rank:28,title:"Secret Desires AI",img:"images/Secret Desires AI.jpg",link:"https://t.crjmpx.com/40746/7757"},
+  {rank:29,title:"Spicier",img:"images/Spicier.jpg",link:"https://t.crjmpx.com/40746/7927"},
+  {rank:30,title:"Swipey",img:"images/Swipey.jpg",link:"https://t.crjmpx.com/40746/7976"},
+  {rank:31,title:"TestRX",img:"images/TestRX.jpg",link:"https://t.crjmpx.com/40746/7977"},
+  {rank:32,title:"Transgender AI",img:"images/Transgender.jpg",link:"https://t.crjmpx.com/40746/10339"}
+];
 
-    const firebaseConfig = {
-      apiKey: "AIzaSyCRLhny8vgo3bjsn-0d2XLU7vakZMMuTn0",
-      authDomain: "tspmovieszone.firebaseapp.com",
-      projectId: "tspmovieszone",
-      storageBucket: "tspmovieszone.firebasestorage.app",
-      messagingSenderId: "156064301789",
-      appId: "1:156064301789:web:1200f842c1630c39ec9134"
-    };
+const box = document.getElementById("offers");
+offers.forEach(o=>{
+  box.innerHTML += `
+  <div class="card">
+    <div class="wrap">
+      <span class="rank">#${o.rank}</span>
+      <img src="${o.img}">
+    </div>
+    <h3>${o.title}</h3>
+    <a class="btn" href="${o.link}" target="_blank" rel="nofollow">Visit Now</a>
+  </div>`;
+});
+</script>
 
-    const app = initializeApp(firebaseConfig);
-    const db = getFirestore(app);
-
-    const q = query(collection(db, "offers"), orderBy("rank"));
-    const snap = await getDocs(q);
-
-    const box = document.getElementById("offers");
-    snap.forEach(doc => {
-      const d = doc.data();
-      box.innerHTML += `
-        <div class="card">
-          <div class="wrap">
-            <span class="rank">#${d.rank}</span>
-            <img src="${d.image}" alt="${d.title}">
-          </div>
-          <h3>${d.title}</h3>
-          <a class="btn" href="${d.link}" target="_blank" rel="nofollow">Visit Now</a>
-        </div>`;
-    });
-  </script>
 </body>
 </html>
