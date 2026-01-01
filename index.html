@@ -2,51 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>TspMoviesZone</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Best AI Fantasy & Girlfriend Tools | Top AI Services 2026</title>
+  <meta name="description" content="Discover the best AI fantasy, girlfriend & adult AI tools. Updated top CPA AI offers with images and direct access." />
+  <meta name="keywords" content="Best AI Tools, AI Girlfriend, AI Fantasy, Top AI Services, CPA AI Offers" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <style>
-    body{background:#0f0f0f;color:#fff;font-family:Arial;margin:0}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;padding:16px}
-    .card{background:#1b1b1b;border-radius:10px;overflow:hidden;transition:.3s}
-    .card:hover{transform:scale(1.03)}
+    body{margin:0;font-family:Arial;background:#0f0f0f;color:#fff}
+    h1{text-align:center;padding:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;padding:20px}
+    .card{background:#1c1c1c;border-radius:10px;overflow:hidden;box-shadow:0 0 15px rgba(0,0,0,.5)}
     .card img{width:100%;height:160px;object-fit:cover}
-    .card h3{margin:10px;font-size:16px}
-    .card a{display:block;margin:10px;background:#e50914;color:#fff;
-      text-align:center;padding:8px;border-radius:6px;text-decoration:none}
+    .card h3{margin:10px}
+    .btn{display:block;margin:10px;background:#ff0055;color:#fff;
+      text-align:center;padding:10px;border-radius:6px;text-decoration:none;font-weight:bold}
+    .rank{position:absolute;background:#ff0055;padding:5px 10px;border-radius:0 0 8px 0}
+    .wrap{position:relative}
   </style>
 </head>
+
 <body>
+  <h1>🔥 Top AI Fantasy & Girlfriend Services</h1>
 
-<div class="grid" id="offers"></div>
+  <div class="grid" id="offers"></div>
 
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getFirestore, collection, getDocs, query, orderBy } 
-  from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getFirestore, collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
 
-  const firebaseConfig = {
-    apiKey: "AIzaSyCRLhny8vgo3bjsn-0d2XLU7vakZMMuTn0",
-    authDomain: "tspmovieszone.firebaseapp.com",
-    projectId: "tspmovieszone"
-  };
+    const firebaseConfig = {
+      apiKey: "AIzaSyCRLhny8vgo3bjsn-0d2XLU7vakZMMuTn0",
+      authDomain: "tspmovieszone.firebaseapp.com",
+      projectId: "tspmovieszone",
+      storageBucket: "tspmovieszone.firebasestorage.app",
+      messagingSenderId: "156064301789",
+      appId: "1:156064301789:web:1200f842c1630c39ec9134"
+    };
 
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
+    const app = initializeApp(firebaseConfig);
+    const db = getFirestore(app);
 
-  const q = query(collection(db, "offers"), orderBy("rank"));
-  const snap = await getDocs(q);
+    const q = query(collection(db, "offers"), orderBy("rank"));
+    const snap = await getDocs(q);
 
-  const wrap = document.getElementById("offers");
-  snap.forEach(doc => {
-    const d = doc.data();
-    wrap.innerHTML += `
-      <div class="card">
-        <img src="${d.image}">
-        <h3>${d.title}</h3>
-        <a href="${d.link}" target="_blank">Watch Now</a>
-      </div>
-    `;
-  });
-</script>
+    const box = document.getElementById("offers");
+    snap.forEach(doc => {
+      const d = doc.data();
+      box.innerHTML += `
+        <div class="card">
+          <div class="wrap">
+            <span class="rank">#${d.rank}</span>
+            <img src="${d.image}" alt="${d.title}">
+          </div>
+          <h3>${d.title}</h3>
+          <a class="btn" href="${d.link}" target="_blank" rel="nofollow">Visit Now</a>
+        </div>`;
+    });
+  </script>
 </body>
 </html>
