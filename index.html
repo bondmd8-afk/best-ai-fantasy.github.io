@@ -2,32 +2,46 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>AI Offers</title>
+<title>Best AI Offers</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif;}
-body{background:#0f0f0f;color:#fff}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#000;
+    color:#fff;
+}
 
 /* HEADER */
 header{
-    position:sticky;
-    top:0;
-    z-index:999;
     background:#000;
     padding:15px 30px;
     display:flex;
     justify-content:space-between;
     align-items:center;
+    border-bottom:1px solid #222;
 }
-header h2{color:#ff004f}
-header nav a{
+
+header h2{
     color:#fff;
-    text-decoration:none;
+}
+
+nav a{
+    color:#ccc;
     margin-left:20px;
+    text-decoration:none;
     font-size:14px;
 }
-header nav a:hover{color:#ff004f}
+
+nav a:hover{
+    color:#fff;
+}
 
 /* HERO */
 .hero{
@@ -36,56 +50,68 @@ header nav a:hover{color:#ff004f}
     display:flex;
     align-items:center;
     justify-content:center;
+    text-align:center;
 }
+
 .hero h1{
-    background:rgba(0,0,0,.7);
+    background:rgba(0,0,0,0.65);
     padding:25px 40px;
-    border-radius:12px;
+    border-radius:15px;
     font-size:36px;
 }
 
 /* GRID */
-.container{max-width:1200px;margin:auto;padding:40px 15px;}
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:50px 15px;
+}
+
 .grid{
     display:grid;
     grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-    gap:20px;
+    gap:25px;
 }
 
 .card{
-    background:#1a1a1a;
-    border-radius:14px;
+    background:#111;
+    border-radius:16px;
     overflow:hidden;
-    transition:.3s;
+    transition:0.3s;
 }
-.card:hover{transform:scale(1.04);}
+
+.card:hover{
+    transform:scale(1.04);
+}
+
 .card img{
     width:100%;
     height:240px;
     object-fit:cover;
 }
-.card h3{
-    padding:10px;
+
+.card p{
+    padding:12px;
+    text-align:center;
     font-size:15px;
-    text-align:center;
 }
-.card a{
-    display:block;
-    text-align:center;
-    background:#ff004f;
-    color:#fff;
-    padding:10px;
-    text-decoration:none;
-}
-.card a:hover{background:#ff2f6f}
 
 /* FOOTER */
 footer{
-    background:#000;
-    padding:30px;
+    background:#050505;
+    padding:40px 20px;
     text-align:center;
-    margin-top:40px;
     font-size:14px;
+    color:#aaa;
+}
+
+footer a{
+    color:#ccc;
+    text-decoration:none;
+}
+
+footer a:hover{
+    color:#fff;
 }
 </style>
 </head>
@@ -93,41 +119,74 @@ footer{
 <body>
 
 <header>
-    <h2>AI Offers</h2>
+    <h2>AI OFFERS</h2>
     <nav>
         <a href="#">Home</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
+        <a href="#offers">Offers</a>
         <a href="#privacy">Privacy</a>
+        <a href="#terms">Terms</a>
+        <a href="#contact">Contact</a>
     </nav>
 </header>
 
-<section class="hero">
-    <h1>🔥 Best AI Offers Collection</h1>
-</section>
+<div class="hero">
+    <h1>🔥 Best AI Tools & Offers</h1>
+</div>
 
-<div class="container">
+<div class="container" id="offers">
 <div class="grid">
 
-<!-- OFFERS -->
-<div class="card"><img src="images/aiallure.jpg"><h3>AI Allure</h3><a href="#">View Offer</a></div>
-<div class="card"><img src="images/aiallure2.jpg"><h3>AI Allure 2</h3><a href="#">View Offer</a></div>
-<div class="card"><img src="images/aimour.jpg"><h3>AI Mour</h3><a href="#">View Offer</a></div>
-<div class="card"><img src="images/aimour2.jpg"><h3>AI Mour 2</h3><a href="#">View Offer</a></div>
-<div class="card"><img src="images/candy.jpg"><h3>Candy AI</h3><a href="#">View Offer</a></div>
-<div class="card"><img src="images/candy2.jpg"><h3>Candy AI 2</h3><a href="#">View Offer</a></div>
-<div class="card"><img src="images/dreambf.jpg"><h3>Dream BF</h3><a href="#">View Offer</a></div>
-<div class="card"><img src="images/dreamgf.jpg"><h3>Dream GF</h3><a href="#">View Offer</a></div>
-<div class="card"><img src="images/brainpill.jpg"><h3>Brain Pill</h3><a href="#">View Offer</a></div>
-<div class="card"><img src="images/girlfriendgpt.png"><h3>Girlfriend GPT</h3><a href="#">View Offer</a></div>
-<div class="card"><img src="images/swipey.jpg"><h3>Swipey</h3><a href="#">View Offer</a></div>
-<div class="card"><img src="images/testrx.jpg"><h3>Test RX</h3><a href="#">View Offer</a></div>
+<div class="card"><img src="images/aiallure.jpg"><p>AI Allure</p></div>
+<div class="card"><img src="images/aiallure2.jpg"><p>AI Allure 2</p></div>
+<div class="card"><img src="images/aimour.jpg"><p>AI Mour</p></div>
+<div class="card"><img src="images/aimour2.jpg"><p>AI Mour 2</p></div>
+<div class="card"><img src="images/candy.jpg"><p>Candy AI</p></div>
+<div class="card"><img src="images/candy2.jpg"><p>Candy AI 2</p></div>
+<div class="card"><img src="images/dreambf.jpg"><p>Dream BF</p></div>
+<div class="card"><img src="images/dreamgf.jpg"><p>Dream GF</p></div>
+<div class="card"><img src="images/ehentai.jpg"><p>EHentai</p></div>
+<div class="card"><img src="images/fanfinity.jpg"><p>Fanfinity</p></div>
+<div class="card"><img src="images/fantasy.jpg"><p>Fantasy</p></div>
+<div class="card"><img src="images/girlfriendgpt.png"><p>Girlfriend GPT</p></div>
+<div class="card"><img src="images/golove.jpg"><p>Go Love</p></div>
+<div class="card"><img src="images/kupid.png"><p>Kupid</p></div>
+<div class="card"><img src="images/lovecape.jpg"><p>Lovecape</p></div>
+<div class="card"><img src="images/ourdream.png"><p>Our Dream</p></div>
+<div class="card"><img src="images/ourdream2.png"><p>Our Dream 2</p></div>
+<div class="card"><img src="images/output2.jpg"><p>Output</p></div>
+<div class="card"><img src="images/pleasur.jpg"><p>Pleasure</p></div>
+<div class="card"><img src="images/pleasur2.jpg"><p>Pleasure 2</p></div>
+<div class="card"><img src="images/pocketgirl.jpg"><p>Pocket Girl</p></div>
+<div class="card"><img src="images/secret.jpg"><p>Secret</p></div>
+<div class="card"><img src="images/secretdesireai2.jpg"><p>Secret Desire</p></div>
+<div class="card"><img src="images/secretdesiresai.jpg"><p>Secret Desire AI</p></div>
+<div class="card"><img src="images/spicier.jpg"><p>Spicier</p></div>
+<div class="card"><img src="images/swipey.jpg"><p>Swipey</p></div>
+<div class="card"><img src="images/swipey2.jpg"><p>Swipey 2</p></div>
+<div class="card"><img src="images/testosteronespportinnerbodylabs.jpg"><p>Testosterone</p></div>
+<div class="card"><img src="images/testrx.jpg"><p>Test RX</p></div>
+<div class="card"><img src="images/transgender.jpg"><p>Transgender</p></div>
+<div class="card"><img src="images/brainpill.jpg"><p>Brain Pill</p></div>
 
 </div>
 </div>
 
 <footer>
-    © 2026 AI Offers | All Rights Reserved
+<p id="privacy">
+<b>Disclaimer:</b> This website is for informational purposes only. We do not own or represent any product shown here.
+</p>
+
+<p id="terms">
+<b>Terms & Conditions:</b> By using this website, you agree that we are not responsible for third‑party services or content.
+</p>
+
+<p id="contact">
+📧 Contact: support@example.com
+</p>
+
+<p>
+© 2026 AI Offers. All Rights Reserved.
+</p>
 </footer>
 
 </body>
