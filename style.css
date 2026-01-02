@@ -1,58 +1,63 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background: #0b0b0b;
-    color: #fff;
+  background: #0d0d0d;
+  color: white;
 }
 
-/* ===== HERO BANNER ===== */
+/* HERO */
 .hero {
-    width: 100%;
-    min-height: 100vh;
-    background: url("images/banner.png") center center / cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  height: 100vh;
+  background: url("images/banner.png") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* ===== OFFERS SECTION ===== */
+.overlay {
+  background: rgba(0,0,0,0.6);
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.overlay h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+/* OFFERS */
 .offers {
-    padding: 40px 20px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  padding: 40px;
 }
 
-/* ===== OFFER CARD ===== */
-.offer-box {
-    background: #111;
-    border-radius: 14px;
-    overflow: hidden;
-    transition: 0.3s;
-    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+.card {
+  background: #151515;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
 }
 
-.offer-box:hover {
-    transform: scale(1.03);
+.card:hover {
+  transform: scale(1.05);
 }
 
-/* IMAGE FIX */
-.offer-box img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    border-radius: 12px;
+.card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
 }
 
-/* TITLE */
-.offer-title {
-    padding: 10px;
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
+.card h3 {
+  text-align: center;
+  padding: 12px;
 }
