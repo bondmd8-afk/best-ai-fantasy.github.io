@@ -107,36 +107,42 @@ nav a:hover {
     text-align: center;
 }
 
-/* BRAND NAME ANIMATION */
+/* BRAND NAME - FULLY FIXED: NO BLUR, CRYSTAL CLEAR, BOLD & PREMIUM */
 .brand-name {
     font-family: 'Orbitron', sans-serif;
-    font-size: 60px;
+    font-size: 68px;
     font-weight: 900;
-    letter-spacing: 4px;
-    background: linear-gradient(45deg, #00ffff, #ff00ff, #00ffff);
+    letter-spacing: 6px;
+    background: linear-gradient(90deg, #00ffff, #ff00ff, #00ffff);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    text-fill-color: transparent;
+    text-shadow: 3px 3px 15px rgba(0, 0, 0, 0.9);
+    -webkit-text-stroke: 2px #000;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 40px;
+    margin-bottom: 50px;
     perspective: 1000px;
+    line-height: 1.1;
 }
 
 .brand-name span {
     display: block;
     opacity: 0;
     transform: translateX(-100%) rotateY(-90deg);
-    animation: wave-in 1.5s ease-out forwards;
+    animation: wave-in 1.6s ease-out forwards;
 }
 
-.brand-name .line1 { animation-delay: 0.2s; }
-.brand-name .line2 { animation-delay: 0.7s; }
+.brand-name .line1 { animation-delay: 0.3s; }
+.brand-name .line2 { animation-delay: 0.8s; }
 
 @keyframes wave-in {
     0% { opacity: 0; transform: translateX(-100%) rotateY(-90deg) scale(0.8); }
-    50% { opacity: 0.5; transform: translateX(20%) rotateY(30deg) scale(1.1); }
+    50% { opacity: 0.8; transform: translateX(15%) rotateY(25deg) scale(1.1); }
     100% { opacity: 1; transform: translateX(0) rotateY(0) scale(1); }
 }
 
@@ -325,8 +331,9 @@ footer::before {
         margin: 0 8px;
     }
     .brand-name {
-        font-size: 40px;
+        font-size: 46px;
         align-items: center;
+        letter-spacing: 4px;
     }
     .hero-title {
         font-size: 28px;
@@ -338,7 +345,7 @@ footer::before {
 
 @media (max-width: 480px) {
     .brand-name {
-        font-size: 32px;
+        font-size: 38px;
     }
     .grid {
         grid-template-columns: 1fr;
