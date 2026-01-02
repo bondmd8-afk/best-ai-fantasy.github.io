@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bondmd8-afk.github.io/best-ai-fantasy.github.io/sitemap.xml
