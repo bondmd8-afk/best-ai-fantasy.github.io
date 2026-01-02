@@ -1,77 +1,83 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-  background: #0d0d0d;
-  color: white;
+    background: #0f0f0f;
+    color: #fff;
 }
 
-/* HERO */
+/* HERO SECTION */
 .hero {
     width: 100%;
-    min-height: 100vh;
+    height: 60vh;
     background: url("images/banner.png") center center / cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
-}
-
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.55); /* dark overlay */
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
     text-align: center;
-    color: #fff;
 }
 
-
-.overlay {
-  background: rgba(0,0,0,0.6);
-  padding: 40px;
-  border-radius: 12px;
-  text-align: center;
+.hero h1 {
+    background: rgba(0,0,0,0.6);
+    padding: 20px 30px;
+    border-radius: 12px;
+    font-size: 32px;
 }
 
-.overlay h1 {
-  font-size: 42px;
-  margin-bottom: 10px;
+/* MAIN CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px 15px;
 }
 
-/* OFFERS */
-.offers {
+/* GRID */
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 20px;
-    padding: 30px;
 }
 
-.offer-card {
-    background: #111;
+/* CARD */
+.card {
+    background: #1b1b1b;
     border-radius: 14px;
     overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.4);
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
-.offer-card:hover {
-    transform: translateY(-5px);
+.card:hover {
+    transform: scale(1.04);
 }
 
-.offer-card img {
+/* IMAGE */
+.card img {
     width: 100%;
-    height: 220px;
+    height: 260px;
     object-fit: cover;
+    border-radius: 14px 14px 0 0;
     display: block;
-    border-bottom: 1px solid #222;
+}
+
+/* TEXT */
+.card p {
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    background: #151515;
+}
+
+/* MOBILE FIX */
+@media (max-width: 600px) {
+    .hero {
+        height: 45vh;
+    }
+
+    .hero h1 {
+        font-size: 22px;
+    }
 }
