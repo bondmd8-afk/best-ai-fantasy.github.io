@@ -39,6 +39,7 @@ const offers = [
 "images/testosteronespportinnerbodylabs.jpg",
 "images/testrx.jpg",
 "images/transgender.jpg"
+"images/brainpill.jpg"
 ];
 
 const container = document.getElementById("offers");
