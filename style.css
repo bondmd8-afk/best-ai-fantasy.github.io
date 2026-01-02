@@ -11,7 +11,7 @@ body{
         radial-gradient(1200px 600px at 10% 10%, rgba(255,77,0,0.12), transparent 40%),
         radial-gradient(800px 500px at 90% 20%, rgba(0,150,255,0.12), transparent 45%),
         radial-gradient(700px 500px at 50% 90%, rgba(140,0,255,0.12), transparent 50%),
-        linear-gradient(180deg, #ffffff 0%, #f6f7fb 100%);
+        linear-gradient(180deg, #ffffff 0%, #f3f5fb 100%);
     background-attachment: fixed;
 }
 
@@ -50,8 +50,10 @@ body{
 .container{
     max-width:1300px;
     margin:auto;
-    padding:40px 20px;
+    padding:60px 20px;
+    background:transparent;   /* IMPORTANT */
 }
+
 
 .grid{
     display:grid;
