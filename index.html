@@ -1,66 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Best AI Offers</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<title>AI Offers</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background:#0f0f0f;
+    color:#fff;
+}
+
+/* HERO */
+.hero{
+    height:60vh;
+    background:url("images/banner.png") center/cover no-repeat;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+
+.hero h1{
+    background:rgba(0,0,0,0.6);
+    padding:20px 30px;
+    border-radius:12px;
+    font-size:32px;
+}
+
+/* GRID */
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:30px 15px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:#1b1b1b;
+    border-radius:14px;
+    overflow:hidden;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.03);
+}
+
+.card img{
+    width:100%;
+    height:260px;
+    object-fit:cover;
+    border-radius:14px 14px 0 0;
+}
+
+.card p{
+    padding:10px;
+    text-align:center;
+    font-size:14px;
+}
+</style>
 </head>
+
 <body>
 
-<!-- HERO -->
 <div class="hero">
-    <h1>Best AI Offers Collection</h1>
+    <h1>🔥 Best AI Offers Collection</h1>
 </div>
 
-<!-- CONTENT -->
 <div class="container">
-    <div class="grid">
+<div class="grid">
 
-        <!-- OFFER ITEMS -->
-        <div class="card"><img src="images/aiallure.jpg"><p>AI Allure</p></div>
-        <div class="card"><img src="images/aiallure2.jpg"><p>AI Allure 2</p></div>
-        <div class="card"><img src="images/aimour.jpg"><p>AI Mour</p></div>
-        <div class="card"><img src="images/aimour2.jpg"><p>AI Mour 2</p></div>
-        <div class="card"><img src="images/brainpill.jpg"><p>Brain Pill</p></div>
-        <div class="card"><img src="images/candy.jpg"><p>Candy</p></div>
-        <div class="card"><img src="images/candy2.jpg"><p>Candy 2</p></div>
-        <div class="card"><img src="images/dreambf.jpg"><p>Dream BF</p></div>
-        <div class="card"><img src="images/dreamgf.jpg"><p>Dream GF</p></div>
-        <div class="card"><img src="images/ehentai.jpg"><p>EHentai</p></div>
-        <div class="card"><img src="images/fanfinity.jpg"><p>Fanfinity</p></div>
-        <div class="card"><img src="images/fanfinity2.jpg"><p>Fanfinity 2</p></div>
-        <div class="card"><img src="images/fantasy.jpg"><p>Fantasy</p></div>
-        <div class="card"><img src="images/get-harder.jpg"><p>Get Harder</p></div>
-        <div class="card"><img src="images/girlfriendgpt.png"><p>Girlfriend GPT</p></div>
-        <div class="card"><img src="images/golove.jpg"><p>Go Love</p></div>
-        <div class="card"><img src="images/joi (1).jpg"><p>JOI 1</p></div>
-        <div class="card"><img src="images/joi (2).jpg"><p>JOI 2</p></div>
-        <div class="card"><img src="images/joi (3).jpg"><p>JOI 3</p></div>
-        <div class="card"><img src="images/joi (4).jpg"><p>JOI 4</p></div>
-        <div class="card"><img src="images/joi (5).jpg"><p>JOI 5</p></div>
-        <div class="card"><img src="images/justsex.jpg"><p>Just Sex</p></div>
-        <div class="card"><img src="images/kupid.png"><p>Kupid</p></div>
-        <div class="card"><img src="images/lovecape.jpg"><p>Love Cape</p></div>
-        <div class="card"><img src="images/luvr.jpg"><p>Luvr</p></div>
-        <div class="card"><img src="images/mylovely.jpg"><p>My Lovely</p></div>
-        <div class="card"><img src="images/ourdream.png"><p>Our Dream</p></div>
-        <div class="card"><img src="images/ourdream2.png"><p>Our Dream 2</p></div>
-        <div class="card"><img src="images/output2.jpg"><p>Output</p></div>
-        <div class="card"><img src="images/pleasur.jpg"><p>Pleasure</p></div>
-        <div class="card"><img src="images/pleasur2.jpg"><p>Pleasure 2</p></div>
-        <div class="card"><img src="images/pocketgirl.jpg"><p>Pocket Girl</p></div>
-        <div class="card"><img src="images/secret.jpg"><p>Secret</p></div>
-        <div class="card"><img src="images/secretdesireai2.jpg"><p>Secret Desire</p></div>
-        <div class="card"><img src="images/secretdesiresai.jpg"><p>Secret Desire AI</p></div>
-        <div class="card"><img src="images/spicier.jpg"><p>Spicier</p></div>
-        <div class="card"><img src="images/swipey.jpg"><p>Swipey</p></div>
-        <div class="card"><img src="images/swipey2.jpg"><p>Swipey 2</p></div>
-        <div class="card"><img src="images/testosteronespportinnerbodylabs.jpg"><p>Testosterone</p></div>
-        <div class="card"><img src="images/testrx.jpg"><p>Test RX</p></div>
-        <div class="card"><img src="images/transgender.jpg"><p>Transgender</p></div>
+<!-- OFFERS -->
+<div class="card"><img src="images/aiallure.jpg"><p>AI Allure</p></div>
+<div class="card"><img src="images/aiallure2.jpg"><p>AI Allure 2</p></div>
+<div class="card"><img src="images/aimour.jpg"><p>AI Mour</p></div>
+<div class="card"><img src="images/aimour2.jpg"><p>AI Mour 2</p></div>
+<div class="card"><img src="images/candy.jpg"><p>Candy AI</p></div>
+<div class="card"><img src="images/candy2.jpg"><p>Candy AI 2</p></div>
+<div class="card"><img src="images/dreambf.jpg"><p>Dream BF</p></div>
+<div class="card"><img src="images/dreamgf.jpg"><p>Dream GF</p></div>
+<div class="card"><img src="images/ehentai.jpg"><p>Ehentai</p></div>
+<div class="card"><img src="images/fanfinity.jpg"><p>Fanfinity</p></div>
+<div class="card"><img src="images/fanfinity2.jpg"><p>Fanfinity 2</p></div>
+<div class="card"><img src="images/fantasy.jpg"><p>Fantasy</p></div>
+<div class="card"><img src="images/get-harder.jpg"><p>Get Harder</p></div>
+<div class="card"><img src="images/girlfriendgpt.png"><p>Girlfriend GPT</p></div>
+<div class="card"><img src="images/golove.jpg"><p>Go Love</p></div>
+<div class="card"><img src="images/joi (1).jpg"><p>JOI 1</p></div>
+<div class="card"><img src="images/joi (2).jpg"><p>JOI 2</p></div>
+<div class="card"><img src="images/joi (3).jpg"><p>JOI 3</p></div>
+<div class="card"><img src="images/joi (4).jpg"><p>JOI 4</p></div>
+<div class="card"><img src="images/joi (5).jpg"><p>JOI 5</p></div>
+<div class="card"><img src="images/justsex.jpg"><p>Just Sex</p></div>
+<div class="card"><img src="images/kupid.png"><p>Kupid</p></div>
+<div class="card"><img src="images/lovecape.jpg"><p>Lovecape</p></div>
+<div class="card"><img src="images/luvr.jpg"><p>Luvr</p></div>
+<div class="card"><img src="images/mylovely.jpg"><p>My Lovely</p></div>
+<div class="card"><img src="images/ourdream.png"><p>Our Dream</p></div>
+<div class="card"><img src="images/ourdream2.png"><p>Our Dream 2</p></div>
+<div class="card"><img src="images/output2.jpg"><p>Output</p></div>
+<div class="card"><img src="images/pleasur.jpg"><p>Pleasure</p></div>
+<div class="card"><img src="images/pleasur2.jpg"><p>Pleasure 2</p></div>
+<div class="card"><img src="images/pocketgirl.jpg"><p>Pocket Girl</p></div>
+<div class="card"><img src="images/secret.jpg"><p>Secret</p></div>
+<div class="card"><img src="images/secretdesireai2.jpg"><p>Secret Desire</p></div>
+<div class="card"><img src="images/secretdesiresai.jpg"><p>Secret Desire AI</p></div>
+<div class="card"><img src="images/spicier.jpg"><p>Spicier</p></div>
+<div class="card"><img src="images/swipey.jpg"><p>Swipey</p></div>
+<div class="card"><img src="images/swipey2.jpg"><p>Swipey 2</p></div>
+<div class="card"><img src="images/testosteronespportinnerbodylabs.jpg"><p>Testosterone</p></div>
+<div class="card"><img src="images/testrx.jpg"><p>Test RX</p></div>
+<div class="card"><img src="images/transgender.jpg"><p>Transgender</p></div>
 
-    </div>
+</div>
 </div>
 
 </body>
